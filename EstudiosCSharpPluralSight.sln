@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstudiosCSharpPluralSight", "EstudiosCSharpPluralSight\EstudiosCSharpPluralSight.csproj", "{AB5EC7DE-65DC-4291-B70E-0747586DF14A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array", "Array\Array.csproj", "{2C692DD4-38C2-4490-A920-EEEDB854BE1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB5EC7DE-65DC-4291-B70E-0747586DF14A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5EC7DE-65DC-4291-B70E-0747586DF14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB5EC7DE-65DC-4291-B70E-0747586DF14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB5EC7DE-65DC-4291-B70E-0747586DF14A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C692DD4-38C2-4490-A920-EEEDB854BE1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C692DD4-38C2-4490-A920-EEEDB854BE1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C692DD4-38C2-4490-A920-EEEDB854BE1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C692DD4-38C2-4490-A920-EEEDB854BE1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12BE659C-0F6C-47FB-9B99-9CD7B356E6F8}
+	EndGlobalSection
+EndGlobal
