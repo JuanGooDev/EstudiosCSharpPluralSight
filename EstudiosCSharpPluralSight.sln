@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EstudiosCSharpPluralSight", "EstudiosCSharpPluralSight\EstudiosCSharpPluralSight.csproj", "{AB5EC7DE-65DC-4291-B70E-0747586DF14A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Array", "Array\Array.csproj", "{2C692DD4-38C2-4490-A920-EEEDB854BE1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Array", "Array\Array.csproj", "{2C692DD4-38C2-4490-A920-EEEDB854BE1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControllingProgramFlow", "ControllingProgramFlow\ControllingProgramFlow.csproj", "{7797D59D-17E0-431D-97A0-88C4E5D740E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControllingProgramFlow", "ControllingProgramFlow\ControllingProgramFlow.csproj", "{7797D59D-17E0-431D-97A0-88C4E5D740E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeTipos", "SistemaDeTipos\SistemaDeTipos.csproj", "{1C08E827-3221-4BE1-9795-7897F170B938}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{7797D59D-17E0-431D-97A0-88C4E5D740E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7797D59D-17E0-431D-97A0-88C4E5D740E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7797D59D-17E0-431D-97A0-88C4E5D740E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C08E827-3221-4BE1-9795-7897F170B938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C08E827-3221-4BE1-9795-7897F170B938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C08E827-3221-4BE1-9795-7897F170B938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C08E827-3221-4BE1-9795-7897F170B938}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
