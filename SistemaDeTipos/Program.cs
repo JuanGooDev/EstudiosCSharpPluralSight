@@ -6,63 +6,75 @@ namespace SistemaDeTipos
     {
         static void Main(string[] args)
         {
-            int monthlyWage = 1234;
-            int months = 12, bonus = 1000;
+            string firstName = "Bethany";
+            string lastName = "Smith";
 
-            bool isActive = true;
-            double rating = 99.25;
+            string fullname1 = firstName + " " + lastName;
+            string fullname = $"Su nombre es: {firstName}  {lastName}";
+            string employeeIdentification = string.Concat(firstName, lastName);
 
-            double ratePerHour = 12.34;
-            int numberOfHoursWorked = 165;
+            string empId = firstName.ToLower() + "-" + lastName.Trim().ToLower();
 
-            long veryLongMonth = numberOfHoursWorked;
-            double d = 123456789.0;
-            int x = (int)d;
+            int length = empId.Length;
 
-            int intVeryLongMonth = (int)veryLongMonth;
-
-            double currentMonthWage = ratePerHour * numberOfHoursWorked;
-
-            Console.WriteLine(currentMonthWage);
-
-            ratePerHour += 3; // ratePerHour = ratePerHour + 3;
-
-            if (currentMonthWage > 2000)
+            if (fullname.Contains("beth") || fullname.Contains("Beth"))
             {
-                Console.WriteLine("Top paid employee");
+                Console.WriteLine("It's Bethany!");
             }
 
-            int numberOfEmployees = 15;
-            numberOfEmployees--;
+            string subString = fullname.Substring(1, 3);
+            Console.WriteLine("Chararters 2 to 4 of fullName are " + subString);
 
-            int intMaxValue = int.MaxValue;
-            int intMinValue = int.MinValue;
 
-            char userSelection = 'a';
-            char upperVersion = char.ToUpper(userSelection);
-            bool isDigit = char.IsDigit(userSelection);
-            bool isLetter = char.IsLetter(userSelection);
+            //Escaping Text
+            string displayName = $"Welcome!\n{firstName}\t{lastName}";
 
-            DateTime hireDate = new DateTime(2021, 07, 04, 14, 30, 0);
+            Console.WriteLine(displayName);
 
-            Console.WriteLine(hireDate);
+            string invalidFilePath = "C:\\data\\employeelist.xlsx";
 
-            DateTime exitDate = new DateTime(2021, 12, 11);
+            string marketingTagLine = "Baking the \"best pies\" ever";
 
-            //DateTime invalidDate = new DateTime(2021, 15, 11);
+            string verbatimFilePath = @"C:\data\employeelist.xlsx";
 
-            DateTime startDate = hireDate.AddDays(15);
 
-            Console.WriteLine(startDate);
+            //Comparaciones de strings
+            string name1 = "Bethany";
+            string name2 = "BETHANY";
 
-            DateTime startHour = DateTime.Now;
-            TimeSpan workTime = new TimeSpan(8, 35, 0);
-            DateTime endHour = startHour.Add(workTime);
+            Console.WriteLine("Are both names equal? " + (name1 == name2));
+            Console.WriteLine("Are both names equal? " + (name1 == "Bethany"));
+            Console.WriteLine("Are both names equal? " + (name1.Equals(name2)));
+            Console.WriteLine("Are both names equal? " + (name2.ToLower() == "bethany"));
 
-            Console.WriteLine(startHour.ToLongDateString());
-            Console.WriteLine(endHour.ToShortTimeString());
+            //Los Strings son immutables
+            string name = "Bethany";
+            string anotherName = name;
+
+            name += " Smith";
+
+            Console.WriteLine("Name: " + name);
+            Console.WriteLine("Another name: " + anotherName);
+
+
+            //Parsing strings
+            Console.WriteLine("Enter the wage");
+            string wage = Console.ReadLine();
+
+            //int wageValue = int.Parse(wage);
+
+            int wageValue;
+            if (int.TryParse(wage, out wageValue))
+            {
+                Console.WriteLine("Parsing success: " + wageValue);
+            }
+            else
+            {
+                Console.WriteLine("Parsing failed");
+            }
 
             Console.ReadLine();
+
         }
     }
 }
