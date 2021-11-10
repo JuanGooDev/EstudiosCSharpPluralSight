@@ -9,6 +9,9 @@ namespace StructClass
             UsingAStruct();
         }
 
+        /// <summary>
+        /// Se crea una variable de tipo empleado la cual permite acceder y asignar valores a las propiedades de esa clase.
+        /// </summary>
         private static void UsingAStruct()
         {
             Employee employee;
@@ -17,6 +20,9 @@ namespace StructClass
             employee.Work();
         }
 
+        /// <summary>
+        /// Permite crear propiedades y métodos de tipo empleado.
+        /// </summary>
         struct Employee
         {
             public string Name;
