@@ -17,6 +17,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumerationClass", "TipoSis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructClass", "StructClass\StructClass.csproj", "{872ACFA7-7A39-4B0F-BF38-CC1BB52ED9AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreacionDeClasesYObjetos", "CreacionDeClasesYObjetos\CreacionDeClasesYObjetos.csproj", "{31AD7ADB-BB56-49D0-B49F-0184AFA85BD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreacionDeClasesYObjetosAPP", "CreacionDeClasesYObjetosAPP\CreacionDeClasesYObjetosAPP.csproj", "{A2FB1C41-2F7D-4CA4-A4B8-68FFA5396EB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{872ACFA7-7A39-4B0F-BF38-CC1BB52ED9AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{872ACFA7-7A39-4B0F-BF38-CC1BB52ED9AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{872ACFA7-7A39-4B0F-BF38-CC1BB52ED9AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31AD7ADB-BB56-49D0-B49F-0184AFA85BD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31AD7ADB-BB56-49D0-B49F-0184AFA85BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31AD7ADB-BB56-49D0-B49F-0184AFA85BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31AD7ADB-BB56-49D0-B49F-0184AFA85BD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2FB1C41-2F7D-4CA4-A4B8-68FFA5396EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2FB1C41-2F7D-4CA4-A4B8-68FFA5396EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2FB1C41-2F7D-4CA4-A4B8-68FFA5396EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2FB1C41-2F7D-4CA4-A4B8-68FFA5396EB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
