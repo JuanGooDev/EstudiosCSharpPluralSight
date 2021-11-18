@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CreacionDeClasesYObjetos.Contabilidad;
+using CreacionDeClasesYObjetos.HR;
+using System;
+using System.Collections.Generic;
 
 namespace CreacionDeClasesYObjetos
 {
@@ -9,27 +12,17 @@ namespace CreacionDeClasesYObjetos
             Console.WriteLine("Creating an employee");
             Console.WriteLine("--------------------");
 
-            Employee juan = new Employee("Juan","Gómez","juan50cent@live.com", new DateTime(1998,04,07),EmployeeType.Manager, 25);
+            List<Employee> employees = new List<Employee>();
+            for (int i = 0; i < 1000000; i++)
+            {
+                Employee randomEmployee = new Employee(Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), Guid.NewGuid().ToString(),
+                    new DateTime(1979, 1, 16), EmployeeType.StoreManager, null);
+                employees.Add(randomEmployee);
+            }
 
-            Employee george = new Employee("George", "Martinez", "george@live.com", new DateTime(1991, 04, 07), EmployeeType.Research, 30);
-
-            juan.HourlyRate = 50;
-            juan.NumberOfHoursWorked = 100;
-            juan.Wage = -10;
-
-            juan.DisplayEmployeeDetails();
-            juan.PerformWork();
-            juan.PerformWork();
-            juan.PerformWork();
-            juan.PerformWork();
-            juan.ReceiveWage();
-
-            george.DisplayEmployeeDetails();
-            george.PerformWork();
-            george.PerformWork();
-            george.PerformWork();
-            george.PerformWork();
-            george.ReceiveWage();
+            employees.Clear();
+            employees = null;
+            GC.Collect();
 
             Console.ReadLine();
         }

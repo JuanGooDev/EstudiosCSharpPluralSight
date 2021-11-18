@@ -1,4 +1,4 @@
-﻿namespace CreacionDeClasesYObjetos
+﻿namespace CreacionDeClasesYObjetos.HR
 {
     public enum EmployeeType
     {

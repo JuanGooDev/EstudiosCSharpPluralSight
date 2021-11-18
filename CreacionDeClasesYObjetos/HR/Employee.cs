@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CreacionDeClasesYObjetos
+namespace CreacionDeClasesYObjetos.HR
 {
     public class Employee
     {        
@@ -14,10 +14,12 @@ namespace CreacionDeClasesYObjetos
 
         private int numberOfHoursWorked;
         private double wage;
-        private double hourlyRate;
+        private double? hourlyRate;
         private DateTime birthDay;
 
         private EmployeeType employeeType;
+        public static double taxRate = 0.15;
+        private const double maxAmountHoursWorked = 1000;
 
         public string FirstName
         {
@@ -74,7 +76,7 @@ namespace CreacionDeClasesYObjetos
             }
         }
 
-        public double HourlyRate
+        public double? HourlyRate
         {
             get { return hourlyRate; }
             set
@@ -101,14 +103,14 @@ namespace CreacionDeClasesYObjetos
             }
         }
 
-        public Employee(string first, string last, string em, DateTime bd, EmployeeType empType, double rate)
+        public Employee(string first, string last, string em, DateTime bd, EmployeeType empType, double? rate)
         {
             this.FirstName = first;
             this.LastName = last;
             this.Email = em;
             this.BirthDay = bd;
             this.EmployeeType = empType;
-            this.HourlyRate = rate;
+            this.HourlyRate = rate ?? 10;
         }
 
         //A esto se le conoce como constructor sobrecargado
@@ -135,7 +137,11 @@ namespace CreacionDeClasesYObjetos
         //Recibir salario
         public double ReceiveWage()
         {
-            Wage = NumberOfHoursWorked * HourlyRate;
+            double wageBeforeTax = NumberOfHoursWorked * HourlyRate.Value;
+            double taxAmoun = wageBeforeTax * taxRate;
+
+            wage = wageBeforeTax - taxAmoun;
+
 
             Console.WriteLine($"The wage for {NumberOfHoursWorked} hours of work is {Wage}.");
             numberOfHoursWorked = 0;
@@ -149,7 +155,13 @@ namespace CreacionDeClasesYObjetos
         public void DisplayEmployeeDetails()
         {
             Console.WriteLine($"\nFirst name: {FirstName}\nLast name: {LastName}\nEmail: {Email}\nBirthday: {BirthDay.ToShortDateString()}\n" +
-                                $"Employee type: {EmployeeType}\n");
+                                $"Employee type: {EmployeeType}\nTax rate: {taxRate}");
         }
+
+        public static void DisplayTaxRate()
+        {
+            Console.WriteLine($"The current tax rate is {taxRate}");
+        }
+
     }
 }
