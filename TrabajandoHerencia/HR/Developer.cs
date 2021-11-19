@@ -8,11 +8,11 @@ namespace TrabajandoHerencia.HR
 {
     public class Developer: Employee
     {
-        public Developer(string first, string last, string em, DateTime bd, double? rate) : base(first, last, em, bd, rate)
+        public Developer(int id,string first, string last, string em, DateTime bd, double? rate) : base(id, first, last, em, bd, rate)
         {            
         }
 
-        public override double ReceiveWage()
+        /*public override double ReceiveWage()
         {
             double wageBeforeTax = NumberOfHoursWorked * HourlyRate.Value;
             double taxAmoun = wageBeforeTax * taxRate;
@@ -24,7 +24,7 @@ namespace TrabajandoHerencia.HR
             NumberOfHoursWorked = 0;
 
             return Wage;
-        }
+        }*/
     }
 
     

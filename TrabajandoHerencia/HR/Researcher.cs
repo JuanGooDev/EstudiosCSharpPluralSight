@@ -8,7 +8,7 @@ namespace TrabajandoHerencia.HR
 {
     public class Researcher : Employee
     {
-        public Researcher(string first, string last, string em, DateTime bd, double? rate) : base(first, last, em, bd, rate)
+        public Researcher(int id, string first, string last, string em, DateTime bd, double? rate) : base(id, first, last, em, bd, rate)
         {
         }
 
@@ -17,7 +17,7 @@ namespace TrabajandoHerencia.HR
             NumberOfHoursWorked += researchHours;
             Console.WriteLine($"Researcher {FirstName} {LastName} has invented a new pie taste!");
         }
-        public override double ReceiveWage()
+       /* public override double ReceiveWage()
         {
             double wageBeforeTax = NumberOfHoursWorked * HourlyRate.Value;
             double taxAmoun = wageBeforeTax * taxRate;
@@ -29,13 +29,13 @@ namespace TrabajandoHerencia.HR
             NumberOfHoursWorked = 0;
 
             return Wage;
-        }
+        }*/
 
     }
 
     public class JuniorResearcher : Researcher
     {
-        public JuniorResearcher(string first, string last, string em, DateTime bd, double? rate) : base(first, last, em, bd, rate)
+        public JuniorResearcher(int id, string first, string last, string em, DateTime bd, double? rate) : base(id ,first, last, em, bd, rate)
         {
         }
     }

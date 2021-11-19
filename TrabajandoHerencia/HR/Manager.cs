@@ -8,7 +8,7 @@ namespace TrabajandoHerencia.HR
 {
     public class Manager : Employee
     {
-        public Manager(string first, string last, string em, DateTime bd, double? rate) : base(first, last, em, bd, rate)
+        public Manager(int id,string first, string last, string em, DateTime bd, double? rate) : base(id,first, last, em, bd, rate)
         {
         }
 
@@ -30,7 +30,7 @@ namespace TrabajandoHerencia.HR
             }
         }
 
-        public override double ReceiveWage()
+        /*public override double ReceiveWage()
         {
 
             double wageBeforeTax = NumberOfHoursWorked * HourlyRate.Value;
@@ -44,6 +44,6 @@ namespace TrabajandoHerencia.HR
 
             return Wage;
 
-        }
+        }*/
     }
 }

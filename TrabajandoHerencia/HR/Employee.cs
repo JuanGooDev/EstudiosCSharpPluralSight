@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace TrabajandoHerencia.HR
 {
-    public abstract class Employee
+    public class Employee : IEmployee, IComparable
     {
+        private int id;
         private string firstName;
         private string lastName;
         private string email;
@@ -20,7 +21,18 @@ namespace TrabajandoHerencia.HR
 
         private DateTime birthDay;
                        
-       
+        
+
+        public int Id
+        {
+            get { return id; }
+            set
+            {
+                id = value;
+            }
+        }
+
+
         public string FirstName
         {
             get
@@ -94,8 +106,9 @@ namespace TrabajandoHerencia.HR
             }
         }
 
-        public Employee(string first, string last, string em, DateTime bd, double? rate)
+        public Employee(int id,string first, string last, string em, DateTime bd, double? rate)
         {
+            this.Id = id;
             this.FirstName = first;
             this.LastName = last;
             this.Email = em;
@@ -105,7 +118,7 @@ namespace TrabajandoHerencia.HR
 
         //A esto se le conoce como constructor sobrecargado
         //El constructor que tiene los 6 parámetros es el que tiene la palabra reservada : this()
-        public Employee(string first, string last, string em, DateTime bd) : this(first, last,
+        public Employee(int id ,string first, string last, string em, DateTime bd) : this(id,first, last,
             em, bd, 0)
         {
         }
@@ -124,9 +137,21 @@ namespace TrabajandoHerencia.HR
             Console.WriteLine($"{FirstName} {LastName} has stopped working!");
         }
 
-        //Recibir salario
-        public abstract double ReceiveWage();
-        
+        public double ReceiveWage()
+        {
+
+            double wageBeforeTax = NumberOfHoursWorked * HourlyRate.Value;
+            double taxAmoun = wageBeforeTax * taxRate;
+
+            Wage = wageBeforeTax - taxAmoun;
+
+
+            Console.WriteLine($"The wage for {NumberOfHoursWorked} hours of work is {Wage}.");
+            NumberOfHoursWorked = 0;
+
+            return Wage;
+
+        }
 
         /// <summary>
         /// Permite conocer los detalles del Empleado.
@@ -145,6 +170,33 @@ namespace TrabajandoHerencia.HR
         public virtual void GiveBonus()
         {
             Console.WriteLine($"{FirstName} {LastName} received a generic bonus of 100!");
+        }
+
+        public void PerforWork()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void GiveCompliment()
+        {
+            Console.WriteLine($"You´ve done a great job, {FirstName}");
+        }
+
+        public int CompareTo(object obj)
+        {
+            var otherEmploye = (Employee)obj;
+            if (Id > otherEmploye.Id)
+            {
+                return 1;
+            }
+            else if (Id < otherEmploye.Id)
+            {
+                return -1;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
