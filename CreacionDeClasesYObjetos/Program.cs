@@ -1,5 +1,4 @@
-﻿using CreacionDeClasesYObjetos.Contabilidad;
-using CreacionDeClasesYObjetos.HR;
+﻿using CreacionDeClasesYObjetos.HR;
 using System;
 using System.Collections.Generic;
 
