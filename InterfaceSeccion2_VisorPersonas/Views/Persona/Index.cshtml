@@ -1,0 +1,18 @@
+﻿@using InterfaceSeccion2_Comun
+@model IEnumerable<Persona>
+
+<h1>Commanders - @ViewData["Title"]</h1>
+
+<section>
+
+
+    @foreach (Persona persona in Model)
+    {
+        <div data="@persona.StartDate.Year.ToString()[2]">
+            <span class="name">@persona.ToString()</span>
+            <span class="year">@persona.StartDate.Year</span>
+            <span class="rating">@persona.Rating/10</span>
+        </div>
+    }
+
+</section>

@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\InterfaceSeccion2_BibliotecaPersonas\InterfaceSeccion2_BibliotecaPersonas.csproj" />
+  </ItemGroup>
+
+</Project>
